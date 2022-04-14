@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Workbench from './components/workbench/Workbench';
+import EnemyInfo from './components/enemy-info/EnemyInfo';
+import Hand from './components/hand/Hand';
+import Battlefield from './components/battlefield/Battlefield';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const style = {
+    background: "black",
+    color: "white",
+    width: "100%",
+    height: "100vh",
+    userSelect: "none",
+  };
+  
+  return (<div style={style}>
+    <Battlefield />
+    <Workbench />
+    <EnemyInfo />
+    <Hand />
+  </div>);
 }
 
 export default App;
